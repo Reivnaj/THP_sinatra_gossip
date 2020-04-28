@@ -22,4 +22,9 @@ class Gossip
     end
     return all_gossips
   end
+
+  def self.find(id)
+    CSV.read("db/gossip.csv")[id.to_i]
+  end
+
 end
